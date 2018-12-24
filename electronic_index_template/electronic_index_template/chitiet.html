@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Trang chủ</title>
+	<title>Trang chi tiết</title>
 	<meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -10,9 +10,31 @@
     
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
+	<link rel="stylesheet"  href="css/lightslider.css"/>
 	<link rel="stylesheet" type="text/css" href="css/layout.css">
 	<script type="text/javascript" src="jquery-3.3.1.min.js"></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+	<script src="js/lightslider.js"></script> 
+	<script>
+    	 $(document).ready(function() {
+			$("#content-slider").lightSlider({
+                loop:true,
+                keyPress:true
+            });
+            $('#image-gallery').lightSlider({
+                gallery:true,
+                item:1,
+                thumbItem:9,
+                slideMargin: 0,
+                speed:500,
+                auto:true,
+                loop:true,
+                onSliderLoad: function() {
+                    $('#image-gallery').removeClass('cS-hidden');
+                }  
+            });
+		});
+    </script>
 </head>
 <body>
 	<div id="header" class="container-fluid">
@@ -86,6 +108,78 @@
 		    </form>
 		  </div>
 		</nav><!--end .navbar-->
+	</div>
+
+	<!-- danh sách mặt hàng -->
+	<div id="chitiet" class="container">
+		<div style="height: 30px; line-height: 30px; background-color: #719b1d; color: #fff;">
+			<div style="margin-left: 10px;">CHI TIẾT SẢN PHẨM</div>
+		</div>
+		<div class="row">
+			<div class="col-xs-9">
+				<div class="container-fluid" style="margin-top: 45px;">
+					<div class="row">
+						<div class="col-xs-5">
+							<div class="item">            
+					            <div class="clearfix" style="max-width:474px;">
+					                <ul id="image-gallery" class="gallery list-unstyled cS-hidden">
+					                    <li data-thumb="img/thumb/cS-1.jpg"> 
+					                        <img src="images/anh1.jpg" height="350px" width="320px">
+					                         </li>
+					                    <li data-thumb="img/thumb/cS-2.jpg"> 
+					                        <img src="images/anh2.jpg" height="350px" width="320px">
+					                         </li>
+					                    <li data-thumb="img/thumb/cS-3.jpg"> 
+					                        <img src="images/anh3.jpg" height="350px" width="320px">
+					                         </li>
+					                </ul>
+					            </div>
+					        </div>
+						</div>
+
+						<div class="col-xs-7"></div>
+					</div>
+				</div>
+			</div>
+
+			<div class="col-xs-3">
+				<div class="chitiet_category">
+					<div id="loaisp" class="chitiet_tieude">CATEGORY</div>
+					<div class="footer-link-content" style="margin-top: 20px; ">
+						<ul>
+							<li><span class="glyphicon glyphicon-play"></span><a href="#">SMART PHONE</a></li>
+							<li><span class="glyphicon glyphicon-play"></span><a href="#">DASKTOP</a></li>
+							<li><span class="glyphicon glyphicon-play"></span><a href="#">LAPTOP</a></li>
+							<li><span class="glyphicon glyphicon-play"></span><a href="#">ACCESSORIES</a></li>
+							<li><span class="glyphicon glyphicon-play"></span><a href="#">NETWORKING</a></li>
+							<li><span class="glyphicon glyphicon-play"></span><a href="#">SOFTWARE</a></li>
+						</ul>
+					</div>
+					<div id="by_brand" class="chitiet_tieude">BY BRAND</div>
+					<div class="footer-link-content" style="margin-top: 20px; ">
+						<ul>
+							<li><span class="glyphicon glyphicon-unchecked"></span><a href="#">HP</a></li>
+							<li><span class="glyphicon glyphicon-unchecked"></span><a href="#">DELL</a></li>
+							<li><span class="glyphicon glyphicon-unchecked"></span><a href="#">APPLE</a></li>
+							<li><span class="glyphicon glyphicon-unchecked"></span><a href="#">ASUS</a></li>
+							<li><span class="glyphicon glyphicon-unchecked"></span><a href="#">SAMSUNG</a></li>
+							<li><span class="glyphicon glyphicon-unchecked"></span><a href="#">TOSHIBA</a></li>
+						</ul>
+					</div>
+					<div id="by_price" class="chitiet_tieude">BY PRICE</div>
+					<div class="footer-link-content" style="margin-top: 20px; ">
+						<ul>
+							<li><span class="glyphicon glyphicon-play"></span><a href="#">APPLE</a></li>
+							<li><span class="glyphicon glyphicon-play"></span><a href="#">$1000 - $2000</a></li>
+							<li><span class="glyphicon glyphicon-play"></span><a href="#">$2000 - $3000</a></li>
+							<li><span class="glyphicon glyphicon-play"></span><a href="#">$3000 - $4000</a></li>
+							<li><span class="glyphicon glyphicon-play"></span><a href="#">$4000 - $5000</a></li>
+							<li><span class="glyphicon glyphicon-play"></span><a href="#">$5000 - $6000</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
 	</div>
 
 	<div id="site-info" class="container-fluid">

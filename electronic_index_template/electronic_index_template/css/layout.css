@@ -390,9 +390,29 @@ a{
 	text-align: center;
 	color: #fff;
 }
+/*---------chitiet.html----------*/
 
-
-
+#chitiet{
+	margin-top: 15px;
+}
+.chitiet_category{
+	margin-top: 35px;
+}
+.chitiet_tieude{
+	height: 30px; 
+	line-height: 30px; 
+	background-color: #80a522; 
+	color: #fff; 
+	font-size: 16px; 
+	border-radius: 1px; 
+	padding-left: 5px;
+}
+.footer-link-content a{
+	text-decoration: none;
+}
+#by_brand, #by_price{
+	margin-top: 45px;
+}
 
 
 
