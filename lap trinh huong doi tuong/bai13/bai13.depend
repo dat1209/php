@@ -1,0 +1,16 @@
+# depslib dependency file v1.0
+1546586328 source:e:\lap trinh huong doi tuong\bai13\main.cpp
+	<iostream>
+	"hang.h"
+
+1546586035 e:\lap trinh huong doi tuong\bai13\hang.h
+	<iostream>
+	<conio.h>
+	<stdio.h>
+	<iomanip>
+
+1546586169 source:e:\lap trinh huong doi tuong\bai13\hang.cpp
+	<iostream>
+	<bits/stdc++.h>
+	"hang.h"
+

@@ -1,0 +1,8 @@
+# depslib dependency file v1.0
+1546586890 source:e:\lap trinh huong doi tuong\bai14\main.cpp
+	<iostream>
+	"sach.h"
+
+1546586724 e:\lap trinh huong doi tuong\bai14\include\sach.h
+	<bits/stdc++.h>
+

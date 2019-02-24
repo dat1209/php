@@ -1,0 +1,14 @@
+# depslib dependency file v1.0
+1546583535 source:e:\lap trinh huong doi tuong\bai11\main.cpp
+	<iostream>
+	<conio.h>
+	<stdio.h>
+	<iomanip>
+	"sinhvien.h"
+
+1546584119 e:\lap trinh huong doi tuong\bai11\sinhvien.h
+	<iostream>
+	<conio.h>
+	<stdio.h>
+	<iomanip>
+

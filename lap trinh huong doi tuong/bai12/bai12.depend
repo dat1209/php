@@ -1,0 +1,14 @@
+# depslib dependency file v1.0
+1546583256 source:e:\lap trinh huong doi tuong\bai12\main.cpp
+	<iostream>
+	<conio.h>
+	<stdio.h>
+	<iomanip>
+	"hcn.h"
+
+1546583196 e:\lap trinh huong doi tuong\bai12\hcn.h
+	<iostream>
+	<conio.h>
+	<stdio.h>
+	<iomanip>
+
