@@ -1,0 +1,27 @@
+CREATE DATABASE QL_SV;
+CREATE TABLE KHOA(
+	MaKH char(2) PRIMARY KEY,
+    TenKH varchar(50) NOT NULL
+);
+CREATE TABLE MON(
+	MaMH char(2) PRIMARY KEY,
+    TenMH varchar(50) NOT NULL,
+    Sotiet int(11) NOT NULL
+);
+CREATE TABLE SINHVIEN(
+	MaSV char(2) PRIMARY KEY,
+    HoSV varchar(30) NOT NULL,
+   	TenSV varchar(20) NOT NULL,
+    Gioitinh bit NOT NULL,
+    Ngaysinh datetime NOT NULL,
+    NoiSinh varchar(50) NOT NULL,
+    MaKH char(2) NOT NULL,
+    Hocbong real NOT NULL,
+    FOREIGN KEY(MaKH) REFERENCES KHOA(MaKH)
+);
+CREATE TABLE KETQUA(
+	MaSV char(2) NOT NULL,
+    MaMH char(2) NOT NULL,
+    Diem int(11) NOT NULL,
+    PRIMARY KEY (MaSV, MaMH)
+);

@@ -1,0 +1,7 @@
+CREATE TABLE tbl_lop(
+    malop int(11) AUTO_INCREMENT PRIMARY KEY,
+    tenlop varchar(50) NOT null,
+    phonghoc varchar(10) not null,
+    makhoa int(11) not null,
+    FOREIGN KEY (makhoa) REFERENCES tbl_khoa(makhoa)
+);

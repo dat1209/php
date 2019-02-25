@@ -1,0 +1,101 @@
+CREATE DATABASE Northwind;
+CREATE TABLE categories(
+    categoryID int(11) AUTO_INCREMENT PRIMARY KEY,
+    categoryName varchar(15) NOT NULL,
+    description MEDIUMTEXT
+);
+CREATE TABLE suppliers(
+    supplierID int(11) AUTO_INCREMENT PRIMARY KEY,
+    companyName varchar(40) NOT NULL,
+    contactName varchar(30) NOT NULL,
+    contactTitle varchar(30) NOT NULL,
+    addres varchar(60) NOT NULL,
+    CITY varchar(15) NOT NULL,
+    region varchar(15) NOT NULL,
+    postalCode varchar(10) NOT NULL,
+    country varchar(15) NOT NULL,
+    phone varchar(24) NOT NULL,
+    fax varchar(24) NOT NULL,
+    homePage MEDIUMTEXT
+);
+CREATE TABLE customers(
+    customerID varchar(5) PRIMARY KEY,
+    companyName varchar(40) NOT NULL,
+    contactName varchar(30) NOT NULL,
+    contactTitle varchar(30) NOT NULL,
+    address varchar(60) NOT NULL,
+    CITY varchar(15) NOT NULL,
+    region varchar(15) NOT NULL,
+    postalCode varchar(10) NOT NULL,
+    country varchar(15) NOT NULL,
+    phone varchar(24) NOT NULL,
+    fax varchar(24) NOT NULL
+);
+CREATE TABLE employees(
+	employeeID int(11) PRIMARY KEY AUTO_INCREMENT,
+    lastName varchar(20) NOT NULL,
+    firstName varchar(20) NOT NULL,
+    title varchar(30) NOT NULL,
+    titleOfCourtesy varchar(25) NOT NULL,
+    birthDate datetime NOT NULL,
+    hireDate datetime NOT NULL,
+    address varchar(60) NOT NULL,
+    CITY varchar(15) NOT NULL,
+    region varchar(15) NOT NULL,
+    postalCode varchar(10) NOT NULL,
+    country varchar(15) NOT NULL,
+    homePhone varchar(24) NOT NULL,
+    extention varchar(4) NOT NULL,
+    notes mediumtext,
+    reportsTo int(11) NOT NULL,
+    photoPath varchar(255) NOT NULL,
+    salary float NOT NULL
+);
+CREATE TABLE shippers(
+	shipperID int(11) AUTO_INCREMENT PRIMARY KEY,
+    companyName varchar(40) NOT NULL,
+    phone varchar(24) NOT NULL
+);
+CREATE TABLE products(
+	productID int(11) PRIMARY KEY AUTO_INCREMENT,
+    productName varchar(40) NOT NULL,
+    supplierID int(11) NOT NULL,
+    categoryID int(11) NOT NULL,
+    quantityPerUnit varchar(20) NOT NULL,
+    unitPrice DECIMAL(10,4) NOT NULL,
+    unitsInStock SMALLINT(2) NOT NULL,
+    unitsOnOder SMALLINT(2) NOT NULL,
+    reorderlevel SMALLINT(2) NOT NULL,
+    discontinued bit NOT NULL,
+    FOREIGN KEY(supplierID) REFERENCES suppliers(supplierID),
+    FOREIGN KEY(categoryID) REFERENCES categories(categoryID)
+);
+CREATE TABLE orders(
+	orderID int(11) AUTO_INCREMENT PRIMARY KEY,
+    customerID varchar(5) NOT NULL,
+    employeeID int(11) NOT NULL,
+    orderDate datetime NOT NULL,
+    requiredDate datetime NOT NULL,
+    shippedDate datetime NOT NULL,
+    shipperID int(11) NOT NULL,
+    freight decimal(10,4) NOT NULL,
+    shipName varchar(40) NOT NULL,
+    shipaddress varchar(60) NOT NULL,
+    shipCity varchar(15) NOT NULL,
+    shipRegion varchar(15) NOT NULL,
+    shipPostalCode varchar(10) NOT NULL,
+    shipCountry varchar(15) NOT NULL,
+    FOREIGN KEY(customerID) REFERENCES customers(customerID),
+    FOREIGN KEY(employeeID) REFERENCES employees(employeeID),
+    FOREIGN KEY(shipperID) REFERENCES shippers(shipperID)
+);
+CREATE TABLE overdetals(
+	orderID int(11) NOT NULL,
+    productID int(11) NOT NULL,
+    unitsPrice decimal(10,4) NOT NULL,
+    quantity SMALLINT(2) NOT NULL,
+    discount double(8,0) NOT NULL,
+    PRIMARY KEY(orderID,productID),
+    FOREIGN KEY(orderID) REFERENCES orders(orderID),
+    FOREIGN KEY(productID) REFERENCES products(productID)
+);
