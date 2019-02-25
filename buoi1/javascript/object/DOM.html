@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+		.lbmsg{
+			color: red;
+		}
+	</style>
+	<script type="text/javascript">
+		function changeText(){
+			var kq=document.getElementById('txtuser').value
+			if(kq=='')
+			{
+				document.getElementById('msguser').innerHTML="Tên đăng nhập không được để trống";
+				document.getElementById('txtuser').style.border="2px solid red";
+			}else
+			{
+				if (kq.length<6) {
+					document.getElementById('msguser').innerHTML="Tên đăng nhập không không hợp lệ";
+					document.getElementById('txtuser').style.border="2px solid red";
+				} else {
+					document.getElementById('msguser').innerHTML='';
+					document.getElementById('msguser').style.cssText="font-size: 20px; border: 2px #DDDDDD;";
+				}
+			}
+		}
+	</script>
+</head>
+<body>
+	<label>Tên đăng nhập</label>
+	<input type="text" name="txtuser" value="" id="txtuser">
+	<label id="msguser" class="lbmsg">*</label><br>
+	<input type="submit" name="btnsubmit" onclick="changeText();">
+</body>
+</html>

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>javascript</title>
+	<style type="text/css">
+		/*mã của css dặt tại đây*/
+	</style>
+	<!--SỬ DỤNG JAVASCRIPT TÁC ĐỘNG VÀO TRANG INDEX.HTML-->
+	<script type="text/javascript">
+		//mã của javascript
+		// document.write("Chào bạn");
+		// var x=30,y=15;
+		// // var s=x/y;
+		// if(x>y){
+		// 	alert("giá trị của x lớn hơn giá trị của y")
+		// }else{
+		// 	alert("giá trị của x nhỏ hơn giá trị của y")
+		// }
+		//nhập tuổi
+		// var tuoi = parseInt(prompt("nhập tuổi"));
+		// if (tuoi<10 && tuoi>=0) { document.write("thiếu nhi")}
+		// else {
+		// 	if (tuoi>=10 && tuoi<16) {document.write(" vị thành niên")} 
+		// 	else {
+		// 		if (tuoi>=16 && tuoi<=30) {document.write("thanh niên")} else {document.write("trung niên")}
+		// 	} 
+		// }
+		//tìm thời gian trong ngày
+		// var time = parseInt(prompt("Nhập giờ"));
+		// switch(time){
+		// 	case 0:
+		// 		alert("chào buổi sáng");break;
+		// 	case 12:
+		// 		alert("chào buổi trưa");break;
+		// 	case 18:
+		// 		alert("chào buổi tối");break;
+		// }
+		//hàm nhập
+		// var x = parseInt(prompt("nhập x"));
+		// var y = parseInt(prompt("nhập y"));
+		// var o = prompt("nhập phép tính");
+		// switch(o){
+		// 	case '+':alert("x+y="+(x+y));break;
+		// 	case '-':alert("x-y="+(x-y));break;
+		// 	case '*':alert("x*y="+(x*y));break;
+		// 	case '/':alert("x/y="+(x/y));break;
+		// 	case '%':alert("x%y="+(x%y));break;
+		// }
+
+		/*--CẤU TRÚC ĐIỀU KIỆN--*/
+		//1. VÒNG LẶP FOR
+			//hiển thị 10 số nguyên dương đầu tiên
+			document.write("--VÒNG LẶP FOR--")
+			for (var i = 1; i <= 10; i++) {
+				document.write("<br>Giá trị thứ " + i + " là: " + i);
+			}
+
+
+		//2. VÒNG LẶP WHILE
+			document.write("<br><hr>--VÒNG LẶP WHILE--")
+			var j=1;
+			while(j<=10)
+			{
+				document.write("<br>Giá trị thứ " + j + " là: " + j);
+				j++;
+			}
+
+		//3. VÒNG LẶP DO...WHILE
+		document.write("<br><hr>--VÒNG LẶP DO...WHILE--")
+			var k=10;
+			do
+			{
+				document.write("<br>Giá trị thứ " + k + " là: " + k);
+				k++;
+			}while(k<=20);
+
+
+	</script>
+	<!--SỬ DỤNG JAVASCRIPT TỪ 1 FILE '.js' BÊN NGOÀI-->
+	<!-- <script type="text/javascript" src="js.script.js"></script> -->
+</head>
+<body>
+
+</body>
+</html>

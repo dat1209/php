@@ -1,0 +1,100 @@
+body{
+	/*background-color: #7DFF00;
+	color: #FF0019;*/
+	/*background-image: url('body-bg.png');
+	background-repeat: no-repeat;
+	background-position: top right;*/
+	/*background: url("body-bg.png") repeat;*/
+	
+
+}
+/*-- MARGIN STYLE --*/
+#header{
+	margin-bottom: 10px;
+	
+}
+#content{
+	/*margin-bottom: 10px;*/
+	margin: 0px 20px 10px;
+}
+#footer{
+	
+}
+div{
+	border: 1px solid black;
+}
+/*-- Padding style --*/
+/*-- padding: khỏng cách nội dung đến đường viền của khối; --*/
+#block{
+	border: 1px solid red;
+	/*padding-right: 20px;
+	padding-top: 20px;
+	padding-left: 20px;
+	padding-bottom: 20px;*/
+	padding: 20px;
+}
+/*-- width_height --*/
+#width_height{
+	background-color: green;
+	height: 200px;
+	width: 50%;
+	float: left;
+}
+#block2{
+	background-color: #7DFF00;
+	width: 49%;
+	float: right;
+}
+/*-- TEXT STYLE: Định dạng cho nội dung văn bản--*/
+#block3{
+	padding: 50px;
+	background-color: green;
+	text-align: justify;
+	text-transform: capitalize;
+}
+#block3 a{
+	text-decoration: none;
+	color: #fff;
+}
+#block3 a:hover{
+	text-decoration: underline;
+	font-size: 20px;
+	color: yellow;
+}
+/*--LIÊN KẾT STYLE--*/
+/*#block4 a:link{/*hiển thị link như văn bản binh thương*/
+	/*color: #000;
+	text-decoration: none;
+}
+#block4 a:hover{*//*biến đổi link khi chỏ chuột vào*/
+	/*font-weight: bold;
+	text-decoration: underline;*/
+/*}
+#block4 a:active{*//*đổi mày link khi click chuột*/
+	/*color: green;
+}
+#block4 a:visited{*//*đổi màu tên link khi vào trang*/
+	/*color: red;
+}*/
+#block4{
+	width: 20%;
+}
+#block4 ul{ /*chỉnh sủa list bậc 1*/
+	list-style-type: none;
+	padding-left: 0px;
+}
+#block4 li ul{/*chỉnh sửa list bậc 2*/
+	display: none;
+}
+#block4 li ul li{/*hiển thị list bặc 2 trên 1 dòng*/
+	/*display: inline;*/
+}
+#block4 li:hover ul{
+	display: block;
+	margin-left: 120px;
+	background-color: red;
+	color: yellow;
+}
+#block4 li:hover ul a{
+	color: yellow;
+}

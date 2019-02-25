@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>funstion</title>
+</head>
+<body>
+	<script type="text/javascript">
+		/*--FUNCTION TRONG JAVASCRIPT--*/
+		// Hàm thư viện của ngôn ngữ
+		
+		// var mobile = parseInt(prompt("Mời bạn nhập số điện thoại:"));
+		// if(isNaN(mobile)==true)
+		// {
+		// 	alert("Bạn nhập sai định dạng.");
+		// }else
+		// {
+		// 	alert("Hợp lệ.");
+		// }
+		// var xt=confirm("Bạn đã đủ 18 tuổi chưa?");
+		// if (xt==true) 
+		// 	{
+		// 		alert("Đã đủ 18 tuổi.");
+		// 	} else 
+		// 	{
+		// 		alert("Chưa đủ 18 tuổi.");
+		// 	}
+
+		// Hàm Người dùng tự định nghĩa: user defined
+
+			//xây dụng 1 chương trình thực hiện nhiều phép tính
+			// function cong(x,y)
+			// {
+			// 	document.write("kết quả phép cộng = "+ (x+y));
+			// }
+			// function tru(x,y)
+			// {
+			// 	document.write("kết quả phép trừ = "+ (x-y));
+			// }
+			// function nhan(x,y)
+			// {
+			// 	document.write("kết quả phép nhân = "+ (x*y));
+			// }
+			// function chia(x,y)
+			// {
+			// 	document.write("kết quả phép chia = "+ (x/y));
+			// }
+			// var a=parseInt(prompt("Nhập giá trị của a:"));
+			// var b=parseInt(prompt("Nhập giá trị của b:"));
+			// var o=prompt("Nhập phép tính:");
+			// switch(o)
+			// {
+			// 	case '+':cong(a,b);break;
+			// 	case '-':tru(a,b);break;
+			// 	case '*':nhan(a,b);break;
+			// 	case '/':chia(a,b);break;
+			// }
+
+			//nhập sdt và đưa ra đầu ra
+			function kiemtra(a)
+			{
+				if(isNaN(a)==true)
+				{
+					alert("Bạn nhập sai định dạng.");
+					return 1;
+				}else
+				{
+					return 0;
+				}
+			}
+			var mobile;
+			do
+			{
+				mobile = prompt("Mời bạn nhập số điện thoại:");
+			}
+			while(mobile == ''||kiemtra(mobile)==1);
+			kiemtra(mobile);
+
+	</script>
+</body>
+</html>

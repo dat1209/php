@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="bootstrap.min.css">
+	<style type="text/css">
+		.lbMsg{
+			color: red;
+		}
+	</style>
+	<script type="text/javascript">
+		function validateForm(){
+			//biến trạng thái  thể hiện có hay không lỗi trc khi gửi lên sever. nếu status = false (có lỗi) và ngược lại.
+			var status=true;
+			//lấy dữu liệu trên form trông qua DOM
+			var user=document.getElementById('txtUser').value;
+			var pass=document.getElementById('txtPass').value;
+			var email=document.getElementById('txtEmail').value;
+			var phone=document.getElementById('txtPhone').value;
+			var kt= /^([a-zA-Z0-9_])+\@([a-zA-Z])+\.([a-zA-Z]{2,4})$/;
+			var check=/^([0-9]){10}\d$/;
+			//tiến hành kiểm tra
+			if (user=='') 
+			{
+				status=false;
+				document.getElementById('lbUser').innerHTML="Tên đăng nhập không được để trống";
+				document.getElementById('txtUser').style.border="2px solid red";
+			}else{
+				document.getElementById('lbUser').innerHTML="*";
+				document.getElementById('txtUser').style.border="2px solid #DDD";
+			}
+			if (pass=='') 
+			{
+				status=false;
+				document.getElementById('lbPass').innerHTML="Mật khẩu không được để trống";
+				document.getElementById('txtPass').style.border="2px solid red";
+			}else{
+				if (pass.length<6) {
+					status=false;
+					document.getElementById('lbPass').innerHTML="Mật khẩu phải có trên 6 kí tự";
+					document.getElementById('txtPass').style.border="2px solid red";
+				} 
+					else {
+						document.getElementById('lbPass').innerHTML="*";
+						document.getElementById('txtPass').style.border="2px solid #DDD";
+					}
+			}
+			if (email=='') 
+			{
+				status=false;
+				document.getElementById('lbEmail').innerHTML="Email không được để trống";
+				document.getElementById('txtEmail').style.border="2px solid red";
+			}else{
+				if (kt.test(email)==true) {
+					document.getElementById('lbEmail').innerHTML="*";
+					document.getElementById('txtEmail').style.border="2px solid #DDD";
+				}else{
+					status=false;
+					document.getElementById('lbEmail').innerHTML="Email không đúng định dạng";
+					document.getElementById('txtEmail').style.border="2px solid red";
+				}
+			}
+			if (phone=='') 
+			{
+				status=false;
+				document.getElementById('lbPhone').innerHTML="Số điện thoại không được để trống";
+				document.getElementById('txtPhone').style.border="2px solid red";
+			}else{
+				if (check.test(phone)==true) {
+						document.getElementById('lbPhone').innerHTML="*";
+						document.getElementById('txtPhone').style.border="2px solid #DDD";
+				}else{
+					status=false;
+					document.getElementById('lbPhone').innerHTML="Số điện thoại phải đủ 10 chữ số";
+					document.getElementById('txtPhone').style.border="2px solid red";
+				}
+			}
+			if (status==false) 
+			{
+				return false;
+			}
+			else{
+				return true;
+			}
+
+
+		}
+	</script>
+</head>
+<body>
+	<div class="container">
+		<div class="page-header">Trang đăng kí</div>
+		<form action="process.php" method="post" onsubmit="return validateForm();">
+			<table class="table table-hover table-reponsive table-bordered">
+				<tr>
+					<td align="right">Tên đăng nhập</td>
+					<td>
+						<input type="text" name="txtUser" id="txtUser" value="" class="form-control">
+						<label id="lbUser" class="lbMsg"></label>
+					</td>
+					<td>
+						(*)
+					</td>
+				</tr>
+				<tr>
+					<td align="right">Mật khẩu</td>
+					<td>
+						<input type="password" name="txtPass" id="txtPass" value="" class="form-control">
+						<label id="lbPass" class="lbMsg"></label>
+					</td>
+					<td>
+						(*)
+					</td>
+				</tr>
+				<tr>
+					<td align="right">Email</td>
+					<td>
+						<input type="text" name="txtEmail" id="txtEmail" value="" class="form-control">
+						<label id="lbEmail" class="lbMsg"></label>
+					</td>
+					<td>
+						(*)
+					</td>
+				</tr>
+				<tr>
+					<td align="right">Số điện thoại</td>
+					<td>
+						<input type="text" name="txtPhone" id="txtPhone" value="" class="form-control">
+						<label id="lbPhone" class="lbMsg"></label>
+					</td>
+					<td>
+						(*)
+					</td>
+				</tr>
+				<tr>
+					<td align="right"></td>
+					<td>
+						<input type="submit" name="btnSignOut" value="Đăng kí" class="form-control btn btn-success">
+					</td>
+					<td>
+					</td>
+				</tr>
+			</table>
+		</form>
+	</div>
+</body>
+</html>

@@ -1,0 +1,88 @@
+/*reset toàn bộ style cho layout*/
+*{margin: 0px; padding: 0px;}
+body{
+	font-family: Roboto-Regular,'Helvetica Neue',Helvetica,Tahoma,Arial,Sans-serif;
+	background-color: #f5f5f5;
+	font-size: 16px;
+}
+
+h1, h2, h3, h4, h5, h6{
+	font-size: 20px;
+}
+
+a{
+	color: #343a40;
+	text-decoration: none;
+}
+
+a:hover{
+	color: #fd7e14;
+}
+
+ul, ol{
+	list-style-type: none;
+}
+
+/*--Header--*/
+#header{
+	border: 1px solid red;
+	padding: 0% 10%;
+}
+
+#header-top{
+	border: 1px solid green;
+	padding: 5px 0px;
+}
+#header-menu{
+	border: 1px solid yellow;
+	padding: 10px 0px;
+}
+#header-menu ul{
+
+}
+#header-menu ul li{
+	display: inline-block;
+}
+#header-menu ul li ul{
+	display: none;
+}
+#header-menu li:hover ul{
+	display: block;
+}
+
+/*--1. Banner--*/
+#banner{
+	height: 250px;
+	border: 1px solid black;
+}
+
+/*--1. Content--*/
+#content{
+	position: relative;
+	margin-top: 5px;
+	padding: 0% 10%;
+	border: 1px solid blue;
+}
+
+#content-main{
+	border: 1px solid red;
+	position: absolute;
+	width: 69%;
+	height: 400px;
+}
+
+#content-right{
+	border: 1px solid green;
+	position: static;
+	float: right;
+	width: 13%;
+	height: 400px;
+}
+
+/*--1. Footer--*/
+#footer{
+	margin-top: 10px;
+	border: 1px solid black;
+	width: 100%;
+	padding: 50px 0px;
+}

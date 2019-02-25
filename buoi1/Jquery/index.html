@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script type="text/javascript" src="jquery-3.3.1.min.js"></script>
+	<style type="text/css">
+		
+	</style>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<script type="text/javascript">
+		
+		$(document).ready(function(){
+			$('.cart').hide();
+			$('.wishlist').hide();
+			//khi đưa chuột lên trên đối tượng có class là'btn-add-cart'
+			$('.btn-add-cart').mouseover(function(){
+				//hiển thị text trong button 'cart'
+				$('.cart').show();
+				//loại bỏ class col-xs-6 của class add-cart
+				$('.add-cart').removeClass('col-xs-6');
+				//thêm class mới cho class add-cart
+				$('.add-cart').addClass('col-xs-9');
+				//loại bỏ class col-xs-6 của class add-cart
+				$('.add-wishlist').removeClass('col-xs-6');
+				//thêm class mới cho class add-cart
+				$('.add-wishlist').addClass('col-xs-3');
+			});
+			$('.btn-add-cart').mouseout(function(){
+				//hiển thị text trong button 'cart'
+				$('.cart').hide();
+				//loại bỏ class col-xs-6 của class add-cart
+				$('.add-cart').removeClass('col-xs-9');
+				//thêm class mới cho class add-cart
+				$('.add-cart').addClass('col-xs-6');
+				//loại bỏ class col-xs-6 của class add-cart
+				$('.add-wishlist').removeClass('col-xs-3');
+				//thêm class mới cho class add-cart
+				$('.add-wishlist').addClass('col-xs-6');
+			});
+			$('.btn-add-wishlist').mouseover(function(){
+				//hiển thị text trong button 'cart'
+				$('.wishlist').show();
+				//loại bỏ class col-xs-6 của class add-cart
+				$('.add-wishlist').removeClass('col-xs-6');
+				//thêm class mới cho class add-cart
+				$('.add-wishlist').addClass('col-xs-9');
+				//loại bỏ class col-xs-6 của class add-cart
+				$('.add-cart').removeClass('col-xs-6');
+				//thêm class mới cho class add-cart
+				$('.add-cart').addClass('col-xs-3');
+			});
+			$('.btn-add-wishlist').mouseout(function(){
+				//hiển thị text trong button 'cart'
+				$('.wishlist').hide();
+				//loại bỏ class col-xs-6 của class add-cart
+				$('.add-wishlist').removeClass('col-xs-9');
+				//thêm class mới cho class add-cart
+				$('.add-wishlist').addClass('col-xs-6');
+				//loại bỏ class col-xs-6 của class add-cart
+				$('.add-cart').removeClass('col-xs-3');
+				//thêm class mới cho class add-cart
+				$('.add-cart').addClass('col-xs-6');
+			});
+		});
+
+	</script>
+</head>
+<body>
+	<div class="container">
+		<div class="crow">
+			<div class="col-xs-3">
+				<div class="crow">
+					<div class="col-xs-6 add-cart">
+						<button class="btn btn-success btn-add-cart form-control">
+							<span class="glyphicon glyphicon-shopping-cart"></span>
+							<span class="cart">add to cart</span>
+						</button>
+					</div>
+					<div class="col-xs-6 add-wishlist">
+						<button class="btn btn-danger btn-add-wishlist form-control">
+							<span class="glyphicon glyphicon-pushpin"></span>
+							<span class="wishlist">add to wishlist</span>
+						</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

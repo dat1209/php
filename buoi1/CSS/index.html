@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>làm việc với CSS</title>
+	<meta charset="utf-8">
+	<!--internal style-->
+	<style type="text/css">
+		div{
+			color: red;
+			background-color: yellow;
+		}
+		#header{
+			height: 100px;
+			background-color: red;
+			color: black;
+		}
+		#content{
+			height: 400px;
+			background-color: blue;
+			color: black;
+		}
+		#footer{
+			height: 200px;
+			background-color: green;
+			color: black;
+		}
+		.menu1{
+			border: 2px solid red;
+			background-color: white;  
+		}
+		.menu{
+			background-color: yellow;
+			border: 2px solid pink;
+		}
+		#content a, #content h1{
+			color: red;
+		}
+	</style>
+	<!--external style-->
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+	<div id="header">
+		<span class="menu1">Trang chủ</span>
+		<span class="menu">Thời trang nam</span>
+		<span class="menu">Phụ kiện</span>
+		<span class="menu1">Giới thiệu</span>
+		<span class="menu1">Liên hệ</span>
+	</div>
+	<div id="content">
+		<a href="#" target="_block" title="tiêu đề nội dung">click vào tôi</a>
+		<h1>tiêu đề nội dung</h1>
+	</div>
+	<div id="footer">footer</div>
+	copyright
+</body>
+</html>
