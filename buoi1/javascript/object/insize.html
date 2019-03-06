@@ -25,55 +25,25 @@
 				status=false;
 				document.getElementById('lbUser').innerHTML="Tên đăng nhập không được để trống";
 				document.getElementById('txtUser').style.border="2px solid red";
-			}else{
-				document.getElementById('lbUser').innerHTML="*";
-				document.getElementById('txtUser').style.border="2px solid #DDD";
 			}
+			
 			if (pass=='') 
 			{
 				status=false;
 				document.getElementById('lbPass').innerHTML="Mật khẩu không được để trống";
 				document.getElementById('txtPass').style.border="2px solid red";
-			}else{
-				if (pass.length<6) {
-					status=false;
-					document.getElementById('lbPass').innerHTML="Mật khẩu phải có trên 6 kí tự";
-					document.getElementById('txtPass').style.border="2px solid red";
-				} 
-					else {
-						document.getElementById('lbPass').innerHTML="*";
-						document.getElementById('txtPass').style.border="2px solid #DDD";
-					}
 			}
 			if (email=='') 
 			{
 				status=false;
 				document.getElementById('lbEmail').innerHTML="Email không được để trống";
 				document.getElementById('txtEmail').style.border="2px solid red";
-			}else{
-				if (kt.test(email)==true) {
-					document.getElementById('lbEmail').innerHTML="*";
-					document.getElementById('txtEmail').style.border="2px solid #DDD";
-				}else{
-					status=false;
-					document.getElementById('lbEmail').innerHTML="Email không đúng định dạng";
-					document.getElementById('txtEmail').style.border="2px solid red";
-				}
 			}
 			if (phone=='') 
 			{
 				status=false;
 				document.getElementById('lbPhone').innerHTML="Số điện thoại không được để trống";
 				document.getElementById('txtPhone').style.border="2px solid red";
-			}else{
-				if (check.test(phone)==true) {
-						document.getElementById('lbPhone').innerHTML="*";
-						document.getElementById('txtPhone').style.border="2px solid #DDD";
-				}else{
-					status=false;
-					document.getElementById('lbPhone').innerHTML="Số điện thoại phải đủ 10 chữ số";
-					document.getElementById('txtPhone').style.border="2px solid red";
-				}
 			}
 			if (status==false) 
 			{
